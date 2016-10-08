@@ -166,7 +166,7 @@ public final class FlowingMenuTransitionManager: UIPercentDrivenInteractiveTrans
     UIView.animate(withDuration: duration, animations: { _ in
       menuFrame.origin.x = 0
       menuView.frame     = menuFrame
-      otherView.alpha    = 0
+      otherView.alpha    = 1
       ov?.alpha          = 0.4
       }) { _ in
         if self.interactive && !status.transitionWasCancelled() {
@@ -225,7 +225,7 @@ public final class FlowingMenuTransitionManager: UIPercentDrivenInteractiveTrans
     containerView.addSubview(ov!)
     containerView.addSubview(menuView)
 
-    otherView.alpha = 0
+    otherView.alpha = 1
     ov?.alpha       = 0.4
 
     UIView.animate(withDuration: duration, delay: 0, options: [.curveEaseOut], animations: {
